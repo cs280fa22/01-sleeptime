@@ -10,6 +10,7 @@
       .output {
         border: 3px solid white;
         margin: 1em 5em 1em 5em;
+        display: none;
       }
     </style>
   </head>
@@ -35,8 +36,8 @@
     </div>
     <script>
       function handleOnClick() {
-        window.alert("buzz!");
-        console.log("fizz!");
+        let output = document.querySelector(".output");
+        output.style.display = "block";
       }
     </script>
   </body>
