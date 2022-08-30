@@ -1,18 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sleeptime</title>
-    <style>
-      body {
-        text-align: center;
-        color: aliceblue;
-        background-color: darkblue;
-      }
-      .output {
-        border: 3px solid white;
-        margin: 1em 5em 1em 5em;
-        display: none;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>Sleeptime App</h1>
@@ -34,24 +26,6 @@
       </p>
       <p>A good night's sleep consists of 5-6 complete sleep cycles.</p>
     </div>
-    <script>
-      function handleOnClick() {
-        let output = document.querySelector(".output");
-        output.style.display = "block";
-
-        let hours = document.getElementById("hours");
-        hours.innerHTML = "";
-        
-        let now = new Date();
-        // allow 14 minutes to fall sleep!
-        now.setMinutes(now.getMinutes() + 14);
-
-        // calculate sleep cycles!
-        for (let i = 1; i <= 6; i++) {
-          now.setMinutes(now.getMinutes() + 90);
-          hours.innerHTML += now.toLocaleTimeString("en-US", { timeStyle: "short" }) + "<br />";
-        } 
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
