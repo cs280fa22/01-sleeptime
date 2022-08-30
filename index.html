@@ -24,7 +24,7 @@
         If you head to bed right now, you should try to wake up at one of the
         following times:
       </p>
-      <p>
+      <p id="hours">
         12:15 AM<br />
         1:45 AM<br />
         3:15 AM<br />
@@ -38,6 +38,9 @@
       function handleOnClick() {
         let output = document.querySelector(".output");
         output.style.display = "block";
+
+        let hours = document.getElementById("hours");
+        hours.innerHTML = "Placeholder for hours!";
       }
     </script>
   </body>
